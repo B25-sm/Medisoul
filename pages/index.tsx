@@ -210,25 +210,172 @@ const features = [
 ];
 
 const products = [
+  // MXL Series (Residential)
   {
-    tag: "Countertop",
-    name: "Household Alkaline Ionizer",
-    bullets: ["pH 3.0–11.5 modes", "Dual 10-stage filtration", "Auto polarity-reverse cleaning"],
+    tag: "Residential",
+    series: "MXL",
+    model: "MXL-5",
+    name: "MXL-5 Ionizer",
+    installation: "Counter Top",
+    plates: "5 XL Matrix GRID Plates",
+    power: "249 Watts",
+    pH_range: "3.0 - 9.8",
+    max_orp: "-507",
+    orp_at_drinkable: "-213 at 9.5 pH",
+    warranty: "7 Year",
+    bullets: ["5 XL Matrix GRID Plates", "pH Range: 3.0 - 9.8", "Max ORP: -507", "Counter Top Installation"],
+    image: "/images/mxl-5-ionizer.png"
   },
   {
-    tag: "Under-Counter",
-    name: "Under-Counter Smart Faucet Ionizer",
-    bullets: ["Touch faucet display", "SMPS power system", "Filter life indicator"],
+    tag: "Residential",
+    series: "MXL",
+    model: "MXL-7",
+    name: "MXL-7 Ionizer",
+    installation: "Counter Top or Under Counter",
+    plates: "7 XL Matrix GRID Plates",
+    power: "450 Watts",
+    pH_range: "2.5 - 11.0",
+    max_orp: "-705",
+    orp_at_drinkable: "-307 at 9.5 pH",
+    warranty: "10 Year Parts | Lifetime Labor",
+    bullets: ["7 XL Matrix GRID Plates", "pH Range: 2.5 - 11.0", "Max ORP: -705", "450W Power"],
+    image: "/images/mxl-7-ionizer.png"
   },
   {
-    tag: "Hydrogen",
-    name: "Molecular Hydrogen Machine",
-    bullets: ["High dissolved H₂", "Selective antioxidant", "Supports wellness & recovery"],
+    tag: "Residential",
+    series: "MXL",
+    model: "MXL-9",
+    name: "MXL-9 Ionizer",
+    installation: "Counter Top or Under Counter",
+    plates: "9 XL Matrix GRID Plates",
+    power: "504 Watts",
+    pH_range: "2.0 - 11.5",
+    max_orp: "-811",
+    orp_at_drinkable: "-411 at 9.5 pH",
+    warranty: "Lifetime",
+    bullets: ["9 XL Matrix GRID Plates", "pH Range: 2.0 - 11.5", "Max ORP: -811", "Lifetime Warranty"],
+    image: "/images/mxl-9-ionizer.png"
   },
   {
-    tag: "Industrial",
-    name: "Industrial Ionized Water System",
-    bullets: ["Sterilize & clean (pH 2.7–11.5)", "Food & pharma ready", "Eco-friendly, minimal chemicals"],
+    tag: "Residential",
+    series: "MXL",
+    model: "MXL-11",
+    name: "MXL-11 Ionizer",
+    installation: "Counter Top or Under Counter",
+    plates: "11 XL Matrix GRID Plates",
+    power: "800 Watts",
+    pH_range: "2.0 - 12.0",
+    max_orp: "-880",
+    orp_at_drinkable: "-559 at 9.5 pH",
+    warranty: "Lifetime Labor",
+    bullets: ["11 XL Matrix GRID Plates", "pH Range: 2.0 - 12.0", "Max ORP: -880", "800W Power"],
+    image: "/images/mxl-11-ionizer.png"
+  },
+  {
+    tag: "Residential",
+    series: "MXL",
+    model: "MXL-13",
+    name: "MXL-13 Ionizer",
+    installation: "Counter Top or Under Counter",
+    plates: "13 XL Matrix GRID Plates",
+    power: "800 Watts",
+    pH_range: "1.7 - 12.2",
+    max_orp: "-903",
+    orp_at_drinkable: "-616 at 9.5 pH",
+    warranty: "Lifetime Labor",
+    bullets: ["13 XL Matrix GRID Plates", "pH Range: 1.7 - 12.2", "Max ORP: -903", "Advanced Performance"],
+    image: "/images/mxl-13-ionizer.png"
+  },
+  {
+    tag: "Residential",
+    series: "MXL",
+    model: "MXL-15",
+    name: "MXL-15 Ionizer",
+    installation: "Counter Top or Under Counter",
+    plates: "15 XL Matrix GRID Plates",
+    power: "800 Watts",
+    pH_range: "1.7 - 12.2",
+    max_orp: "-1003",
+    orp_at_drinkable: "-966 at 9.5 pH",
+    warranty: "Lifetime Labor",
+    bullets: ["15 XL Matrix GRID Plates", "pH Range: 1.7 - 12.2", "Max ORP: -1003", "Premium Performance"],
+    image: "/images/mxl-15-ionizer.png"
+  },
+  // Commercial Series
+  {
+    tag: "Commercial",
+    series: "LC",
+    model: "LC-11",
+    name: "LC-11 Commercial Ionizer",
+    installation: "Counter Top",
+    plates: "11 XL Matrix GRID Plates",
+    power: "800 Watts",
+    pH_range: "2.0 - 12.0",
+    max_orp: "-880",
+    orp_at_drinkable: "-559 at 9.5 pH",
+    warranty: "7 Year",
+    bullets: ["11 Plates Commercial Grade", "pH Range: 2.0 - 12.0", "Max ORP: -880", "Heavy Duty Design"],
+    image: "/images/lc-11-ionizer.png"
+  },
+  {
+    tag: "Commercial",
+    series: "LC",
+    model: "LC-13",
+    name: "LC-13 Commercial Ionizer",
+    installation: "Counter Top",
+    plates: "13 XL Matrix GRID Plates",
+    power: "800 Watts",
+    pH_range: "1.7 - 12.2",
+    max_orp: "-903",
+    orp_at_drinkable: "-616 at 9.5 pH",
+    warranty: "7 Year",
+    bullets: ["13 Plates Commercial Grade", "pH Range: 1.7 - 12.2", "Max ORP: -903", "High Performance"],
+    image: "/images/lc-13-ionizer.png"
+  },
+  {
+    tag: "Commercial",
+    series: "LC",
+    model: "LC-30",
+    name: "LC-30 Commercial Ionizer",
+    installation: "Counter Top",
+    plates: "30 XL Matrix GRID Plates",
+    power: "1000 Watts",
+    pH_range: "2.0 - 12.2",
+    max_orp: "-1005",
+    orp_at_drinkable: "N/A",
+    warranty: "Lifetime Parts | 5 Year Labor",
+    bullets: ["30 XL Matrix GRID Plates", "1000W Industrial Power", "Max ORP: -1005", "Commercial Scale"],
+    image: "/images/lc-30-ionizer.png"
+  },
+  {
+    tag: "Commercial",
+    series: "LC",
+    model: "LC-60",
+    name: "LC-60 Commercial Ionizer",
+    installation: "Counter Top",
+    plates: "60 XL Matrix GRID Plates",
+    power: "1500 Watts",
+    pH_range: "2.0 - 12.2",
+    max_orp: "-1193",
+    orp_at_drinkable: "N/A",
+    warranty: "Lifetime Parts | 5 Year Labor",
+    bullets: ["60 XL Matrix GRID Plates", "1500W Heavy Duty", "Max ORP: -1193", "Large Scale Operations"],
+    image: "/images/lc-60-ionizer.png"
+  },
+  {
+    tag: "Commercial",
+    series: "LC",
+    model: "LC-90",
+    name: "LC-90 Commercial Ionizer",
+    installation: "Counter Top",
+    plates: "90 XL Matrix GRID Plates",
+    power: "2000 Watts",
+    pH_range: "2.0 - 12.2",
+    max_orp: "-1193",
+    orp_at_drinkable: "N/A",
+    warranty: "Lifetime Parts | 5 Year Labor",
+    bullets: ["90 XL Matrix GRID Plates", "2000W Maximum Power", "Max ORP: -1193", "Industrial Grade"],
+    image: "/images/lc-90-ionizer.png"
   },
 ];
 
@@ -1105,13 +1252,24 @@ export default function TyentStyleLanding() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Choose from our range of cutting-edge water ionizers designed for every lifestyle and need
             </p>
+            
+            {/* Product Series Info */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8"
             >
-              <Button variant="outline" className="h-12 px-8 text-lg font-semibold border-2 hover:bg-blue-50">
-                View All Products
-              </Button>
+              <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full border border-blue-200">
+                <div className="w-3 h-3 rounded-full bg-blue-600"></div>
+                <span className="text-sm font-semibold text-gray-700">MXL Series - Residential</span>
+                <span className="text-xs text-gray-500 bg-white px-2 py-1 rounded-full">6 Models</span>
+              </div>
+              <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-emerald-50 to-cyan-50 rounded-full border border-emerald-200">
+                <div className="w-3 h-3 rounded-full bg-emerald-600"></div>
+                <span className="text-sm font-semibold text-gray-700">LC Series - Commercial</span>
+                <span className="text-xs text-gray-500 bg-white px-2 py-1 rounded-full">5 Models</span>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -1181,7 +1339,7 @@ export default function TyentStyleLanding() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.8, delay: 0.6 + (index * 0.1) }}
-                      whileHover={{ scale: 1.1, rotateY: 10 }}
+                      whileHover={{ scale: 1.05 }}
                       className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
                     >
                       {/* Animated Background */}
@@ -1197,9 +1355,13 @@ export default function TyentStyleLanding() {
                         className="absolute inset-0"
                       ></motion.div>
 
-                      {/* Product Illustration */}
-                      <div className="relative h-full flex items-center justify-center">
-                        {illustrationForProduct(p.tag, p.name)}
+                      {/* Product Image */}
+                      <div className="relative h-full flex items-center justify-center p-4">
+                        <img 
+                          src={p.image} 
+                          alt={p.name}
+                          className="w-full h-full object-contain"
+                        />
                       </div>
 
                       {/* Floating Elements */}
@@ -1224,6 +1386,27 @@ export default function TyentStyleLanding() {
                       >
                         <ShieldIcon className="h-4 w-4 text-white" />
                       </motion.div>
+                    </motion.div>
+
+                    {/* Specifications Grid */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.7 + (index * 0.1) }}
+                      className="grid grid-cols-2 gap-3 p-4 bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-xl"
+                    >
+                      <div className="text-center">
+                        <p className="text-xs text-gray-500 mb-1">Power</p>
+                        <p className="text-sm font-bold text-gray-900">{p.power}</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-xs text-gray-500 mb-1">Warranty</p>
+                        <p className="text-sm font-bold text-gray-900">{p.warranty}</p>
+                      </div>
+                      <div className="col-span-2 text-center pt-2 border-t border-blue-100">
+                        <p className="text-xs text-gray-500 mb-1">Installation</p>
+                        <p className="text-sm font-semibold text-blue-700">{p.installation}</p>
+                      </div>
                     </motion.div>
 
                     {/* Features List */}
@@ -1295,6 +1478,83 @@ export default function TyentStyleLanding() {
               </motion.div>
             ))}
           </div>
+
+          {/* Product Series Comparison */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mt-20 mb-12"
+          >
+            <div className="grid md:grid-cols-2 gap-6">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">MXL</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Residential Series</h3>
+                    <p className="text-sm text-gray-600">Perfect for Homes & Families</p>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>5 to 15 XL Matrix GRID Plates</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>pH Range: 1.7 - 12.2</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>Counter Top or Under Counter Installation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>Up to Lifetime Warranty Available</span>
+                  </li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="p-8 rounded-2xl bg-gradient-to-br from-emerald-50 to-cyan-50 border-2 border-emerald-200"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-emerald-600 to-cyan-600 flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">LC</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Commercial Series</h3>
+                    <p className="text-sm text-gray-600">Built for Heavy Duty Use</p>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>11 to 90 XL Matrix GRID Plates</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>Power: 800W - 2000W Industrial Grade</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>Designed for Restaurants, Offices, Gyms</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>Lifetime Parts | 5 Year Labor Warranty</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
 
           {/* Bottom CTA Section */}
           <motion.div 
