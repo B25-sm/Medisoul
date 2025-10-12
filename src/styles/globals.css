@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0A0F2C;
+  --color-accent: #FFD100;
+  --color-support: #E5E5E5;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  color: #111827;
+  background: #ffffff;
+}
+
+
