@@ -1,8 +1,10 @@
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
+import ProductCarousel from "@/components/ProductCarousel";
 
 /**
  * Premium Tyent-style site replica (Medisoul)
@@ -210,12 +212,13 @@ const features = [
 ];
 
 const products = [
-  // MXL Series (Residential)
+  // MSL Series (Residential) - Black Variants
   {
     tag: "Residential",
-    series: "MXL",
-    model: "MXL-5",
-    name: "MXL-5 Ionizer",
+    series: "MSL",
+    model: "MSL-5",
+    name: "MSL-5 Ionizer",
+    color: "Black",
     installation: "Counter Top",
     plates: "5 XL Matrix GRID Plates",
     power: "249 Watts",
@@ -224,13 +227,14 @@ const products = [
     orp_at_drinkable: "-213 at 9.5 pH",
     warranty: "7 Year",
     bullets: ["5 XL Matrix GRID Plates", "pH Range: 3.0 - 9.8", "Max ORP: -507", "Counter Top Installation"],
-    image: "/images/mxl-5-ionizer.png"
+    image: "/images/5.jpg"
   },
   {
     tag: "Residential",
-    series: "MXL",
-    model: "MXL-7",
-    name: "MXL-7 Ionizer",
+    series: "MSL",
+    model: "MSL-7",
+    name: "MSL-7 Ionizer",
+    color: "Black",
     installation: "Counter Top or Under Counter",
     plates: "7 XL Matrix GRID Plates",
     power: "450 Watts",
@@ -239,13 +243,14 @@ const products = [
     orp_at_drinkable: "-307 at 9.5 pH",
     warranty: "10 Year Parts | Lifetime Labor",
     bullets: ["7 XL Matrix GRID Plates", "pH Range: 2.5 - 11.0", "Max ORP: -705", "450W Power"],
-    image: "/images/mxl-7-ionizer.png"
+    image: "/images/7.jpg"
   },
   {
     tag: "Residential",
-    series: "MXL",
-    model: "MXL-9",
-    name: "MXL-9 Ionizer",
+    series: "MSL",
+    model: "MSL-9",
+    name: "MSL-9 Ionizer",
+    color: "Black",
     installation: "Counter Top or Under Counter",
     plates: "9 XL Matrix GRID Plates",
     power: "504 Watts",
@@ -254,13 +259,14 @@ const products = [
     orp_at_drinkable: "-411 at 9.5 pH",
     warranty: "Lifetime",
     bullets: ["9 XL Matrix GRID Plates", "pH Range: 2.0 - 11.5", "Max ORP: -811", "Lifetime Warranty"],
-    image: "/images/mxl-9-ionizer.png"
+    image: "/images/9.jpg"
   },
   {
     tag: "Residential",
-    series: "MXL",
-    model: "MXL-11",
-    name: "MXL-11 Ionizer",
+    series: "MSL",
+    model: "MSL-11",
+    name: "MSL-11 Ionizer",
+    color: "Black",
     installation: "Counter Top or Under Counter",
     plates: "11 XL Matrix GRID Plates",
     power: "800 Watts",
@@ -269,13 +275,14 @@ const products = [
     orp_at_drinkable: "-559 at 9.5 pH",
     warranty: "Lifetime Labor",
     bullets: ["11 XL Matrix GRID Plates", "pH Range: 2.0 - 12.0", "Max ORP: -880", "800W Power"],
-    image: "/images/mxl-11-ionizer.png"
+    image: "/images/11.jpg"
   },
   {
     tag: "Residential",
-    series: "MXL",
-    model: "MXL-13",
-    name: "MXL-13 Ionizer",
+    series: "MSL",
+    model: "MSL-13",
+    name: "MSL-13 Ionizer",
+    color: "Black",
     installation: "Counter Top or Under Counter",
     plates: "13 XL Matrix GRID Plates",
     power: "800 Watts",
@@ -284,13 +291,14 @@ const products = [
     orp_at_drinkable: "-616 at 9.5 pH",
     warranty: "Lifetime Labor",
     bullets: ["13 XL Matrix GRID Plates", "pH Range: 1.7 - 12.2", "Max ORP: -903", "Advanced Performance"],
-    image: "/images/mxl-13-ionizer.png"
+    image: "/images/13.jpg"
   },
   {
     tag: "Residential",
-    series: "MXL",
-    model: "MXL-15",
-    name: "MXL-15 Ionizer",
+    series: "MSL",
+    model: "MSL-15",
+    name: "MSL-15 Ionizer",
+    color: "Black",
     installation: "Counter Top or Under Counter",
     plates: "15 XL Matrix GRID Plates",
     power: "800 Watts",
@@ -299,44 +307,112 @@ const products = [
     orp_at_drinkable: "-966 at 9.5 pH",
     warranty: "Lifetime Labor",
     bullets: ["15 XL Matrix GRID Plates", "pH Range: 1.7 - 12.2", "Max ORP: -1003", "Premium Performance"],
-    image: "/images/mxl-15-ionizer.png"
+    image: "/images/15.jpg"
   },
-  // Commercial Series
+  // MSL Series (Residential) - White Variants
   {
-    tag: "Commercial",
-    series: "LC",
-    model: "LC-11",
-    name: "LC-11 Commercial Ionizer",
+    tag: "Residential",
+    series: "MSL",
+    model: "MSL-5",
+    name: "MSL-5 Ionizer",
+    color: "White",
     installation: "Counter Top",
+    plates: "5 XL Matrix GRID Plates",
+    power: "249 Watts",
+    pH_range: "3.0 - 9.8",
+    max_orp: "-507",
+    orp_at_drinkable: "-213 at 9.5 pH",
+    warranty: "7 Year",
+    bullets: ["5 XL Matrix GRID Plates", "pH Range: 3.0 - 9.8", "Max ORP: -507", "Counter Top Installation"],
+    image: "/images/5-white.jpg"
+  },
+  {
+    tag: "Residential",
+    series: "MSL",
+    model: "MSL-7",
+    name: "MSL-7 Ionizer",
+    color: "White",
+    installation: "Counter Top or Under Counter",
+    plates: "7 XL Matrix GRID Plates",
+    power: "450 Watts",
+    pH_range: "2.5 - 11.0",
+    max_orp: "-705",
+    orp_at_drinkable: "-307 at 9.5 pH",
+    warranty: "10 Year Parts | Lifetime Labor",
+    bullets: ["7 XL Matrix GRID Plates", "pH Range: 2.5 - 11.0", "Max ORP: -705", "450W Power"],
+    image: "/images/7-white.jpg"
+  },
+  {
+    tag: "Residential",
+    series: "MSL",
+    model: "MSL-9",
+    name: "MSL-9 Ionizer",
+    color: "White",
+    installation: "Counter Top or Under Counter",
+    plates: "9 XL Matrix GRID Plates",
+    power: "504 Watts",
+    pH_range: "2.0 - 11.5",
+    max_orp: "-811",
+    orp_at_drinkable: "-411 at 9.5 pH",
+    warranty: "Lifetime",
+    bullets: ["9 XL Matrix GRID Plates", "pH Range: 2.0 - 11.5", "Max ORP: -811", "Lifetime Warranty"],
+    image: "/images/9-white.jpg"
+  },
+  {
+    tag: "Residential",
+    series: "MSL",
+    model: "MSL-11",
+    name: "MSL-11 Ionizer",
+    color: "White",
+    installation: "Counter Top or Under Counter",
     plates: "11 XL Matrix GRID Plates",
     power: "800 Watts",
     pH_range: "2.0 - 12.0",
     max_orp: "-880",
     orp_at_drinkable: "-559 at 9.5 pH",
-    warranty: "7 Year",
-    bullets: ["11 Plates Commercial Grade", "pH Range: 2.0 - 12.0", "Max ORP: -880", "Heavy Duty Design"],
-    image: "/images/lc-11-ionizer.png"
+    warranty: "Lifetime Labor",
+    bullets: ["11 XL Matrix GRID Plates", "pH Range: 2.0 - 12.0", "Max ORP: -880", "800W Power"],
+    image: "/images/11-white.jpg"
   },
   {
-    tag: "Commercial",
-    series: "LC",
-    model: "LC-13",
-    name: "LC-13 Commercial Ionizer",
-    installation: "Counter Top",
+    tag: "Residential",
+    series: "MSL",
+    model: "MSL-13",
+    name: "MSL-13 Ionizer",
+    color: "White",
+    installation: "Counter Top or Under Counter",
     plates: "13 XL Matrix GRID Plates",
     power: "800 Watts",
     pH_range: "1.7 - 12.2",
     max_orp: "-903",
     orp_at_drinkable: "-616 at 9.5 pH",
-    warranty: "7 Year",
-    bullets: ["13 Plates Commercial Grade", "pH Range: 1.7 - 12.2", "Max ORP: -903", "High Performance"],
-    image: "/images/lc-13-ionizer.png"
+    warranty: "Lifetime Labor",
+    bullets: ["13 XL Matrix GRID Plates", "pH Range: 1.7 - 12.2", "Max ORP: -903", "Advanced Performance"],
+    image: "/images/13-white.jpg"
   },
   {
+    tag: "Residential",
+    series: "MSL",
+    model: "MSL-15",
+    name: "MSL-15 Ionizer",
+    color: "White",
+    installation: "Counter Top or Under Counter",
+    plates: "15 XL Matrix GRID Plates",
+    power: "800 Watts",
+    pH_range: "1.7 - 12.2",
+    max_orp: "-1003",
+    orp_at_drinkable: "-966 at 9.5 pH",
+    warranty: "Lifetime Labor",
+    bullets: ["15 XL Matrix GRID Plates", "pH Range: 1.7 - 12.2", "Max ORP: -1003", "Premium Performance"],
+    image: "/images/15-white.jpg"
+  },
+  // Tycoon Series (Commercial)
+  {
     tag: "Commercial",
-    series: "LC",
-    model: "LC-30",
-    name: "LC-30 Commercial Ionizer",
+    series: "TYCOON",
+    model: "TYCOON-30",
+    name: "Tycoon 30 Ionizer",
+    color: "Black",
     installation: "Counter Top",
     plates: "30 XL Matrix GRID Plates",
     power: "1000 Watts",
@@ -345,13 +421,14 @@ const products = [
     orp_at_drinkable: "N/A",
     warranty: "Lifetime Parts | 5 Year Labor",
     bullets: ["30 XL Matrix GRID Plates", "1000W Industrial Power", "Max ORP: -1005", "Commercial Scale"],
-    image: "/images/lc-30-ionizer.png"
+    image: "/images/tycoon-30.jpg"
   },
   {
     tag: "Commercial",
-    series: "LC",
-    model: "LC-60",
-    name: "LC-60 Commercial Ionizer",
+    series: "TYCOON",
+    model: "TYCOON-60",
+    name: "Tycoon 60 Ionizer",
+    color: "Black",
     installation: "Counter Top",
     plates: "60 XL Matrix GRID Plates",
     power: "1500 Watts",
@@ -360,13 +437,14 @@ const products = [
     orp_at_drinkable: "N/A",
     warranty: "Lifetime Parts | 5 Year Labor",
     bullets: ["60 XL Matrix GRID Plates", "1500W Heavy Duty", "Max ORP: -1193", "Large Scale Operations"],
-    image: "/images/lc-60-ionizer.png"
+    image: "/images/tycoon-60.jpg"
   },
   {
     tag: "Commercial",
-    series: "LC",
-    model: "LC-90",
-    name: "LC-90 Commercial Ionizer",
+    series: "TYCOON",
+    model: "TYCOON-90",
+    name: "Tycoon 90 Ionizer",
+    color: "Black",
     installation: "Counter Top",
     plates: "90 XL Matrix GRID Plates",
     power: "2000 Watts",
@@ -375,7 +453,7 @@ const products = [
     orp_at_drinkable: "N/A",
     warranty: "Lifetime Parts | 5 Year Labor",
     bullets: ["90 XL Matrix GRID Plates", "2000W Maximum Power", "Max ORP: -1193", "Industrial Grade"],
-    image: "/images/lc-90-ionizer.png"
+    image: "/images/tycoon-90.jpg"
   },
 ];
 
@@ -435,8 +513,7 @@ export default function TyentStyleLanding() {
       <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white font-bold">MS</span>
-            <span className="font-semibold tracking-tight">Medisoul Ionizers</span>
+            <Image src="/medisoul-logo.png" alt="Medisoul Logo" width={240} height={80} className="h-20 w-auto object-contain" priority />
           </div>
           <nav className="hidden items-center gap-6 md:flex">
             <a href="#home" className="hover:text-blue-700">Home</a>
@@ -1262,222 +1339,19 @@ export default function TyentStyleLanding() {
             >
               <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full border border-blue-200">
                 <div className="w-3 h-3 rounded-full bg-blue-600"></div>
-                <span className="text-sm font-semibold text-gray-700">MXL Series - Residential</span>
+                <span className="text-sm font-semibold text-gray-700">MSL Series - Residential</span>
                 <span className="text-xs text-gray-500 bg-white px-2 py-1 rounded-full">6 Models</span>
               </div>
               <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-emerald-50 to-cyan-50 rounded-full border border-emerald-200">
                 <div className="w-3 h-3 rounded-full bg-emerald-600"></div>
-                <span className="text-sm font-semibold text-gray-700">LC Series - Commercial</span>
-                <span className="text-xs text-gray-500 bg-white px-2 py-1 rounded-full">5 Models</span>
+                <span className="text-sm font-semibold text-gray-700">Tycoon Series - Commercial</span>
+                <span className="text-xs text-gray-500 bg-white px-2 py-1 rounded-full">3 Models</span>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Products Grid */}
-          <div className="grid gap-8 lg:grid-cols-3">
-            {products.map((p, index) => (
-              <motion.div
-                key={p.name}
-                initial={{ opacity: 0, y: 80, rotateX: -20 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: index * 0.2,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                viewport={{ once: true, margin: "-50px" }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -20,
-                  rotateY: 5,
-                  transition: { type: "spring", stiffness: 300, damping: 20 }
-                }}
-                className="group relative perspective-1000"
-              >
-                <Card className="relative h-full rounded-3xl border-0 bg-white/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden transform-gpu">
-                  {/* Product Category Badge */}
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.3 + (index * 0.1) }}
-                    className="absolute top-6 left-6 z-10"
-                  >
-                    <div className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 text-white text-xs font-bold uppercase tracking-wider shadow-lg">
-                      {p.tag}
-                    </div>
-                  </motion.div>
-
-                  {/* Favorite Button */}
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.5 + (index * 0.1) }}
-                    whileHover={{ scale: 1.2, rotate: 360 }}
-                    className="absolute top-6 right-6 z-10 cursor-pointer"
-                  >
-                    <div className="rounded-full bg-white/80 backdrop-blur-sm p-3 shadow-lg hover:bg-red-50 transition-colors duration-300">
-                      <StarIcon className="h-5 w-5 text-gray-600 hover:text-red-500" />
-                    </div>
-                  </motion.div>
-
-                  <CardHeader className="relative p-8 pt-20">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
-                    >
-                      <CardTitle className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">
-                        {p.name}
-                      </CardTitle>
-                    </motion.div>
-                  </CardHeader>
-
-                  <CardContent className="relative p-8 pt-2 space-y-6">
-                    {/* Enhanced Product Image */}
-                    <motion.div 
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.8, delay: 0.6 + (index * 0.1) }}
-                      whileHover={{ scale: 1.05 }}
-                      className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
-                    >
-                      {/* Animated Background */}
-                      <motion.div 
-                        animate={{ 
-                          background: [
-                            "linear-gradient(135deg, #dbeafe, #e0e7ff)",
-                            "linear-gradient(135deg, #e0e7ff, #dbeafe)",
-                            "linear-gradient(135deg, #dbeafe, #e0e7ff)"
-                          ]
-                        }}
-                        transition={{ duration: 4, repeat: Infinity }}
-                        className="absolute inset-0"
-                      ></motion.div>
-
-                      {/* Product Image */}
-                      <div className="relative h-full flex items-center justify-center p-4">
-                        <img 
-                          src={p.image} 
-                          alt={p.name}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-
-                      {/* Floating Elements */}
-                      <motion.div 
-                        animate={{ 
-                          y: [0, -10, 0],
-                          opacity: [0.5, 1, 0.5]
-                        }}
-                        transition={{ duration: 3, repeat: Infinity, delay: index * 0.5 }}
-                        className="absolute top-4 right-4 rounded-full bg-blue-500 p-2 shadow-lg"
-                      >
-                        <WaterIcon className="h-4 w-4 text-white" />
-                      </motion.div>
-
-                      <motion.div 
-                        animate={{ 
-                          scale: [1, 1.2, 1],
-                          opacity: [0.3, 0.7, 0.3]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-                        className="absolute bottom-4 left-4 rounded-full bg-purple-500 p-2 shadow-lg"
-                      >
-                        <ShieldIcon className="h-4 w-4 text-white" />
-                      </motion.div>
-                    </motion.div>
-
-                    {/* Specifications Grid */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.7 + (index * 0.1) }}
-                      className="grid grid-cols-2 gap-3 p-4 bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-xl"
-                    >
-                      <div className="text-center">
-                        <p className="text-xs text-gray-500 mb-1">Power</p>
-                        <p className="text-sm font-bold text-gray-900">{p.power}</p>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-xs text-gray-500 mb-1">Warranty</p>
-                        <p className="text-sm font-bold text-gray-900">{p.warranty}</p>
-                      </div>
-                      <div className="col-span-2 text-center pt-2 border-t border-blue-100">
-                        <p className="text-xs text-gray-500 mb-1">Installation</p>
-                        <p className="text-sm font-semibold text-blue-700">{p.installation}</p>
-                      </div>
-                    </motion.div>
-
-                    {/* Features List */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.8 + (index * 0.1) }}
-                      className="space-y-3"
-                    >
-                      <h4 className="text-lg font-semibold text-gray-900">Key Features</h4>
-                      <ul className="space-y-3">
-                        {p.bullets.map((bullet, bulletIndex) => (
-                          <motion.li 
-                            key={bullet}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ 
-                              duration: 0.4, 
-                              delay: 1 + (index * 0.1) + (bulletIndex * 0.1) 
-                            }}
-                            className="flex items-start gap-3 group-hover:gap-4 transition-all duration-300"
-                          >
-                            <motion.div
-                              whileHover={{ scale: 1.2, rotate: 360 }}
-                              transition={{ duration: 0.3 }}
-                              className="rounded-full bg-gradient-to-r from-green-500 to-emerald-500 p-1 mt-0.5 flex-shrink-0"
-                            >
-                              <CheckIcon className="h-3 w-3 text-white" />
-                            </motion.div>
-                            <span className="text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-300">
-                              {bullet}
-                            </span>
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </motion.div>
-
-                    {/* CTA Button */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 1.2 + (index * 0.1) }}
-                      className="pt-4"
-                    >
-                      <motion.div
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      >
-                        <Button className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-xl hover:shadow-2xl transition-all duration-300">
-                          <motion.div
-                            animate={{ rotate: [0, 360] }}
-                            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                            className="mr-2"
-                          >
-                            <WaterIcon className="h-5 w-5" />
-                          </motion.div>
-                          Get Quote
-                        </Button>
-                      </motion.div>
-                    </motion.div>
-
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 right-0 w-24 h-24 opacity-5 group-hover:opacity-10 transition-opacity duration-300">
-                      <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-500 to-blue-500 rounded-bl-full"></div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          {/* Products Carousel */}
+          <ProductCarousel products={products} />
 
           {/* Product Series Comparison */}
           <motion.div

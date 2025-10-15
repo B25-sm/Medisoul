@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
@@ -249,7 +250,7 @@ const certs = [
 ];
 
 const blogTeasers = [
-  { title: "Alkaline vs RO: What’s Right for You?", excerpt: "Understand TDS, minerals, and ORP in simple terms.", tag: "Education" },
+  { title: "Alkaline vs RO: What's Right for You?", excerpt: "Understand TDS, minerals, and ORP in simple terms.", tag: "Education" },
   { title: "How to choose an Ionizer in India", excerpt: "Plates, power, filtration—what actually matters.", tag: "Buying Guide" },
   { title: "Hydrogen Water & Recovery", excerpt: "What early research suggests about H₂.", tag: "Wellness" },
 ];
@@ -284,33 +285,8 @@ export default function TyentStyleLanding() {
         </div>
       </div>
 
-      {/* Navbar */}
-      <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white font-bold">MS</span>
-            <span className="font-semibold tracking-tight">Medisoul Ionizers</span>
-          </div>
-          <nav className="hidden items-center gap-6 md:flex">
-            <a href="#home" className="hover:text-blue-700">Home</a>
-            <a href="#about" className="hover:text-blue-700">About Us</a>
-            <a href="#products" className="hover:text-blue-700">Products</a>
-            <a href="#benefits" className="hover:text-blue-700">Benefits</a>
-            <a href="#why-brand" className="hover:text-blue-700">Why Medisoul</a>
-            <a href="#why-ionizer" className="hover:text-blue-700">Why Water Ionizer</a>
-            <a href="#certs" className="hover:text-blue-700">Certifications</a>
-            <a href="#blogs" className="hover:text-blue-700">Blogs</a>
-            <a href="#testimonials" className="hover:text-blue-700">Testimonials</a>
-            <a href="#contact" className="hover:text-blue-700">Contact Us</a>
-          </nav>
-          <div className="flex items-center gap-2">
-            <Button className="hidden md:inline-flex">Get Pricing</Button>
-            <Button variant="outline" className="md:hidden" asChild>
-              <a href="#contact" className="inline-flex items-center"><PhoneIcon className="mr-2 h-4 w-4"/>Call</a>
-            </Button>
-          </div>
-        </div>
-      </header>
+      {/* Advanced Navbar */}
+      <Navbar />
 
       {/* Hero */}
       <section id="home" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-100/30">
@@ -390,7 +366,7 @@ export default function TyentStyleLanding() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-              className="space-y-4"
+              className="space-y-6"
             >
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
@@ -408,6 +384,17 @@ export default function TyentStyleLanding() {
                   Water Experience
                 </motion.span>
               </motion.h1>
+              
+              {/* Enhanced Subheading */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
+                className="space-y-3"
+              >
+                <h2 className="text-2xl font-semibold text-gray-800 lg:text-3xl">
+                  Premium Water Ionizers for Modern Living
+                </h2>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -426,6 +413,55 @@ export default function TyentStyleLanding() {
                   className="font-semibold"
                 > negative ORP</motion.span> for optimal health.
               </motion.p>
+                
+                {/* Key Benefits List */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
+                  className="space-y-2 pt-4"
+                >
+                  <h3 className="text-lg font-medium text-gray-800 mb-3">Why Choose Our Ionizers:</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <motion.li 
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1.2 + (0 * 0.1) }}
+                      className="flex items-center gap-3"
+                    >
+                      <CheckIcon className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      <span className="font-medium">Hydrogen-Rich Water</span> - Powerful antioxidant benefits
+                    </motion.li>
+                    <motion.li 
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1.3 + (1 * 0.1) }}
+                      className="flex items-center gap-3"
+                    >
+                      <CheckIcon className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      <span className="font-medium">Adjustable pH Levels</span> - From 8.5 to 11.5 for optimal health
+                    </motion.li>
+                    <motion.li 
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1.4 + (2 * 0.1) }}
+                      className="flex items-center gap-3"
+                    >
+                      <CheckIcon className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      <span className="font-medium">Medical-Grade Filtration</span> - 10-stage dual ultra-filtration system
+                    </motion.li>
+                    <motion.li 
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1.5 + (3 * 0.1) }}
+                      className="flex items-center gap-3"
+                    >
+                      <CheckIcon className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      <span className="font-medium">Zero Maintenance</span> - Automatic self-cleaning technology
+                    </motion.li>
+                  </ul>
+                </motion.div>
+              </motion.div>
             </motion.div>
 
             {/* CTA Buttons */}
@@ -721,20 +757,71 @@ export default function TyentStyleLanding() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="space-y-6"
+              className="space-y-8"
             >
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-2 text-sm font-medium text-white shadow-lg">
                   <span className="mr-2">✨</span>
                   FROM THE EDITOR'S DESK
                 </div>
                 <h2 className="text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl">
-                  Welcome to <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Life Ionizers</span>
+                  Welcome to <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Medisoul Ionizers</span>
                 </h2>
+                <h3 className="text-2xl font-semibold text-gray-800 lg:text-3xl">
+                  Pioneers of Water Innovation Since 2003
+                </h3>
               </div>
+              
+              {/* Enhanced Content Structure */}
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-gray-900">Our Mission</h4>
               <p className="text-lg leading-relaxed text-gray-600">
-                At Life Ionizers, we believe that the essence of true health, vitality, and longevity flows from the purest gift of nature – water.
-              </p>
+                    At Medisoul Ionizers, we believe that the essence of true health, vitality, and longevity flows from the purest gift of nature – water. We are dedicated to revolutionizing how you experience hydration through cutting-edge ionization technology.
+                  </p>
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-gray-900">Our Vision</h4>
+                  <p className="text-lg leading-relaxed text-gray-600">
+                    To become the global leader in water ionization technology, making premium alkaline water accessible to every household while maintaining the highest standards of quality, innovation, and customer satisfaction.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-gray-900">What Sets Us Apart</h4>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium">20+ Years of Expertise</span>
+                        <p className="text-gray-600">Two decades of continuous innovation and refinement</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium">Medical-Grade Quality</span>
+                        <p className="text-gray-600">FDA-approved components and BPA-free materials</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium">Global Presence</span>
+                        <p className="text-gray-600">Serving customers in 86+ countries worldwide</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium">Comprehensive Support</span>
+                        <p className="text-gray-600">24/7 customer service and local installation network</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </motion.div>
             
             <motion.div 
@@ -745,49 +832,82 @@ export default function TyentStyleLanding() {
             >
               <div className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-2xl ring-1 ring-gray-200/50">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent"></div>
-                <div className="relative space-y-6">
+                <div className="relative space-y-8">
+                  {/* Company Journey Section */}
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-gray-900">Our Journey of Excellence</h3>
                   <div className="flex items-start space-x-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg">
                       <WaterIcon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">Two Decades of Innovation</h3>
-                      <p className="mt-2 text-gray-600 leading-relaxed">
+                        <h4 className="text-xl font-semibold text-gray-900 mb-2">Two Decades of Innovation</h4>
+                        <p className="text-gray-600 leading-relaxed">
                         For over twenty years, we have stood as pioneers of innovation, transforming simple drinking water into a source of extraordinary power – rich in antioxidants, alkaline in nature, and crafted to nourish the body, awaken the mind, and uplift the soul.
                       </p>
+                      </div>
                     </div>
                   </div>
                   
+                  {/* Technology Section */}
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-semibold text-gray-900">Advanced Technology</h4>
                   <div className="flex items-start space-x-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 text-white shadow-lg">
                       <ShieldIcon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">Redefining Wellness</h3>
-                      <p className="mt-2 text-gray-600 leading-relaxed">
+                        <h5 className="text-lg font-medium text-gray-900 mb-2">Redefining Wellness</h5>
+                        <p className="text-gray-600 leading-relaxed">
                         Our vision is bold yet simple – to redefine wellness at its very core. With cutting-edge ionization technology, every drop becomes more than just hydration; it becomes a fountain of purity, balance, and rejuvenation.
                       </p>
+                      </div>
                     </div>
                   </div>
                   
+                  {/* Quality Section */}
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-semibold text-gray-900">Uncompromising Quality</h4>
                   <div className="flex items-start space-x-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white shadow-lg">
                       <StarIcon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">Excellence in Every Drop</h3>
-                      <p className="mt-2 text-gray-600 leading-relaxed">
+                        <h5 className="text-lg font-medium text-gray-900 mb-2">Excellence in Every Drop</h5>
+                        <p className="text-gray-600 leading-relaxed">
                         Guided by excellence, our mission is unwavering: to bring clean, safe, and life-enhancing ionized water solutions at home. From advanced research to flawless design, from trusted quality to global recognition.
                       </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Key Statistics */}
+                  <div className="grid grid-cols-2 gap-4 pt-4">
+                    <div className="text-center p-4 bg-blue-50 rounded-xl">
+                      <div className="text-2xl font-bold text-blue-600">20+</div>
+                      <div className="text-sm text-gray-600">Years Experience</div>
+                    </div>
+                    <div className="text-center p-4 bg-emerald-50 rounded-xl">
+                      <div className="text-2xl font-bold text-emerald-600">86+</div>
+                      <div className="text-sm text-gray-600">Countries</div>
+                    </div>
+                    <div className="text-center p-4 bg-purple-50 rounded-xl">
+                      <div className="text-2xl font-bold text-purple-600">1M+</div>
+                      <div className="text-sm text-gray-600">Happy Customers</div>
+                    </div>
+                    <div className="text-center p-4 bg-amber-50 rounded-xl">
+                      <div className="text-2xl font-bold text-amber-600">99.9%</div>
+                      <div className="text-sm text-gray-600">Contaminant Removal</div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mt-8 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white">
-                  <p className="text-center text-lg font-medium">
+                  <h4 className="text-lg font-semibold mb-2 text-center">Join the Revolution</h4>
+                  <p className="text-center text-base">
                     Step into a new age of health, vitality, and boundless energy. 
                     <br />
-                    <span className="text-blue-100">Welcome to Life Ionizers – where every sip is the beginning of true wellness.</span>
+                    <span className="text-blue-100 font-medium">Welcome to Medisoul Ionizers – where every sip is the beginning of true wellness.</span>
                   </p>
                 </div>
               </div>
@@ -824,9 +944,32 @@ export default function TyentStyleLanding() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4 lg:text-5xl">
               Why Choose an <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Ionizer</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the science-backed benefits of ionized water with our advanced technology
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4 lg:text-3xl">
+              The Science Behind Superior Hydration
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+              Experience the science-backed benefits of ionized water with our advanced technology. Our ionizers transform ordinary water into a powerful antioxidant-rich, alkaline solution that supports your body's natural healing processes.
             </p>
+            
+            {/* Key Benefits Overview */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-8">
+              <div className="text-center p-4 bg-blue-50 rounded-xl">
+                <div className="text-2xl font-bold text-blue-600 mb-1">pH 8.5-11.5</div>
+                <div className="text-sm text-gray-600">Alkaline Range</div>
+              </div>
+              <div className="text-center p-4 bg-emerald-50 rounded-xl">
+                <div className="text-2xl font-bold text-emerald-600 mb-1">-400mV</div>
+                <div className="text-sm text-gray-600">ORP Level</div>
+              </div>
+              <div className="text-center p-4 bg-purple-50 rounded-xl">
+                <div className="text-2xl font-bold text-purple-600 mb-1">H₂</div>
+                <div className="text-sm text-gray-600">Molecular Hydrogen</div>
+              </div>
+              <div className="text-center p-4 bg-amber-50 rounded-xl">
+                <div className="text-2xl font-bold text-amber-600 mb-1">99.9%</div>
+                <div className="text-sm text-gray-600">Pure Water</div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Features Grid */}
@@ -872,9 +1015,38 @@ export default function TyentStyleLanding() {
                   </CardHeader>
                   
                   <CardContent className="relative p-8 pt-2">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+                        {f.title}
+                      </h4>
                     <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                       {f.desc}
                     </p>
+                      
+                      {/* Additional Details */}
+                      <div className="space-y-2 pt-2">
+                        {f.title === "Hydrogen-Rich Water" && (
+                          <div className="text-sm text-gray-500">
+                            <span className="font-medium">Benefits:</span> Neutralizes free radicals, supports cellular health, enhances recovery
+                          </div>
+                        )}
+                        {f.title === "Dual Ultra Filtration" && (
+                          <div className="text-sm text-gray-500">
+                            <span className="font-medium">Stages:</span> Sediment → Carbon → Ceramic → Vitamin C → Ionization
+                          </div>
+                        )}
+                        {f.title === "Adjustable pH & ORP" && (
+                          <div className="text-sm text-gray-500">
+                            <span className="font-medium">Range:</span> pH 3.0-11.5, ORP up to -400mV for maximum antioxidant potential
+                          </div>
+                        )}
+                        {f.title === "Micro-Clustering" && (
+                          <div className="text-sm text-gray-500">
+                            <span className="font-medium">Result:</span> 5-6 water molecules per cluster vs 10-13 in regular water
+                          </div>
+                        )}
+                      </div>
+                    </div>
                     
                     {/* Decorative Element */}
                     <motion.div 
@@ -923,9 +1095,31 @@ export default function TyentStyleLanding() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4 lg:text-5xl">
               The <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Medisoul Advantage</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Unmatched quality, innovation, and service that sets us apart in the water ionizer industry
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4 lg:text-3xl">
+              Industry-Leading Excellence Since 2003
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+              Unmatched quality, innovation, and service that sets us apart in the water ionizer industry. Our commitment to excellence has made us the trusted choice for health-conscious families worldwide.
             </p>
+            
+            {/* Competitive Advantages */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-8">
+              <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-emerald-100">
+                <div className="text-3xl font-bold text-emerald-600 mb-2">20+</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Years Innovation</div>
+                <div className="text-sm text-gray-600">Leading the industry with continuous R&D</div>
+              </div>
+              <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-blue-100">
+                <div className="text-3xl font-bold text-blue-600 mb-2">86+</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Countries Served</div>
+                <div className="text-sm text-gray-600">Global presence with local support</div>
+              </div>
+              <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-purple-100">
+                <div className="text-3xl font-bold text-purple-600 mb-2">1M+</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Happy Customers</div>
+                <div className="text-sm text-gray-600">Proven track record of satisfaction</div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Features Grid */}
@@ -1015,13 +1209,65 @@ export default function TyentStyleLanding() {
                     </motion.div>
 
                     {/* Content */}
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
                         {feature.title}
                       </h3>
                       <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                         {feature.description}
                       </p>
+                      
+                      {/* Additional Benefits */}
+                      <div className="space-y-2 pt-2">
+                        {feature.title === "Medical-Grade Materials" && (
+                          <ul className="text-sm text-gray-500 space-y-1">
+                            <li>• FDA-approved components</li>
+                            <li>• BPA-free construction</li>
+                            <li>• Food-grade materials</li>
+                            <li>• ISO 13485 certified</li>
+                          </ul>
+                        )}
+                        {feature.title === "Dual Ultra-Filtration" && (
+                          <ul className="text-sm text-gray-500 space-y-1">
+                            <li>• 99.9% contaminant removal</li>
+                            <li>• Mineral preservation</li>
+                            <li>• Chlorine & heavy metals</li>
+                            <li>• 6-month filter life</li>
+                          </ul>
+                        )}
+                        {feature.title === "Strong Negative ORP" && (
+                          <ul className="text-sm text-gray-500 space-y-1">
+                            <li>• Up to -400mV ORP</li>
+                            <li>• Antioxidant properties</li>
+                            <li>• Free radical neutralization</li>
+                            <li>• Cellular protection</li>
+                          </ul>
+                        )}
+                        {feature.title === "Automatic Self-Clean" && (
+                          <ul className="text-sm text-gray-500 space-y-1">
+                            <li>• Zero maintenance required</li>
+                            <li>• Scale prevention</li>
+                            <li>• Optimal performance</li>
+                            <li>• Long-lasting plates</li>
+                          </ul>
+                        )}
+                        {feature.title === "Touch Smart Faucet" && (
+                          <ul className="text-sm text-gray-500 space-y-1">
+                            <li>• Real-time pH display</li>
+                            <li>• ORP monitoring</li>
+                            <li>• Filter life indicator</li>
+                            <li>• Easy operation</li>
+                          </ul>
+                        )}
+                        {feature.title === "Local Service Network" && (
+                          <ul className="text-sm text-gray-500 space-y-1">
+                            <li>• 24/7 customer support</li>
+                            <li>• Certified technicians</li>
+                            <li>• Installation service</li>
+                            <li>• Warranty coverage</li>
+                          </ul>
+                        )}
+                      </div>
                     </div>
 
                     {/* Animated Progress Bar */}
@@ -1102,9 +1348,33 @@ export default function TyentStyleLanding() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4 lg:text-5xl">
               Premium <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Ionizers</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Choose from our range of cutting-edge water ionizers designed for every lifestyle and need
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4 lg:text-3xl">
+              Advanced Technology for Every Home
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+              Choose from our range of cutting-edge water ionizers designed for every lifestyle and need. Each model features our latest innovations in water ionization technology.
             </p>
+            
+            {/* Product Categories Overview */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
+              <div className="text-center p-4 bg-purple-50 rounded-xl border border-purple-100">
+                <div className="text-lg font-semibold text-purple-700 mb-1">Countertop</div>
+                <div className="text-sm text-gray-600">Compact & Portable</div>
+              </div>
+              <div className="text-center p-4 bg-blue-50 rounded-xl border border-blue-100">
+                <div className="text-lg font-semibold text-blue-700 mb-1">Under-Counter</div>
+                <div className="text-sm text-gray-600">Built-in Installation</div>
+              </div>
+              <div className="text-center p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                <div className="text-lg font-semibold text-emerald-700 mb-1">Hydrogen</div>
+                <div className="text-sm text-gray-600">Pure H₂ Generation</div>
+              </div>
+              <div className="text-center p-4 bg-amber-50 rounded-xl border border-amber-100">
+                <div className="text-lg font-semibold text-amber-700 mb-1">Industrial</div>
+                <div className="text-sm text-gray-600">Commercial Grade</div>
+              </div>
+            </div>
+
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -1226,13 +1496,14 @@ export default function TyentStyleLanding() {
                       </motion.div>
                     </motion.div>
 
-                    {/* Features List */}
+                    {/* Product Details */}
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.8 + (index * 0.1) }}
-                      className="space-y-3"
+                      className="space-y-4"
                     >
+                      <div className="space-y-3">
                       <h4 className="text-lg font-semibold text-gray-900">Key Features</h4>
                       <ul className="space-y-3">
                         {p.bullets.map((bullet, bulletIndex) => (
@@ -1259,6 +1530,94 @@ export default function TyentStyleLanding() {
                           </motion.li>
                         ))}
                       </ul>
+                      </div>
+
+                      {/* Product Specifications */}
+                      <div className="space-y-3 pt-4 border-t border-gray-100">
+                        <h5 className="text-md font-semibold text-gray-900">Specifications</h5>
+                        <div className="grid grid-cols-2 gap-3 text-sm">
+                          {p.tag === "Countertop" && (
+                            <>
+                              <div className="bg-blue-50 p-2 rounded-lg">
+                                <div className="font-medium text-blue-700">pH Range</div>
+                                <div className="text-gray-600">3.0 - 11.5</div>
+                              </div>
+                              <div className="bg-emerald-50 p-2 rounded-lg">
+                                <div className="font-medium text-emerald-700">ORP Level</div>
+                                <div className="text-gray-600">Up to -400mV</div>
+                              </div>
+                              <div className="bg-purple-50 p-2 rounded-lg">
+                                <div className="font-medium text-purple-700">Water Types</div>
+                                <div className="text-gray-600">9 Different Modes</div>
+                              </div>
+                              <div className="bg-amber-50 p-2 rounded-lg">
+                                <div className="font-medium text-amber-700">Filtration</div>
+                                <div className="text-gray-600">10-Stage Dual</div>
+                              </div>
+                            </>
+                          )}
+                          {p.tag === "Under-Counter" && (
+                            <>
+                              <div className="bg-blue-50 p-2 rounded-lg">
+                                <div className="font-medium text-blue-700">Installation</div>
+                                <div className="text-gray-600">Under-Sink</div>
+                              </div>
+                              <div className="bg-emerald-50 p-2 rounded-lg">
+                                <div className="font-medium text-emerald-700">Display</div>
+                                <div className="text-gray-600">Touch Faucet</div>
+                              </div>
+                              <div className="bg-purple-50 p-2 rounded-lg">
+                                <div className="font-medium text-purple-700">Power System</div>
+                                <div className="text-gray-600">SMPS</div>
+                              </div>
+                              <div className="bg-amber-50 p-2 rounded-lg">
+                                <div className="font-medium text-amber-700">Filter Indicator</div>
+                                <div className="text-gray-600">Life Status</div>
+                              </div>
+                            </>
+                          )}
+                          {p.tag === "Hydrogen" && (
+                            <>
+                              <div className="bg-blue-50 p-2 rounded-lg">
+                                <div className="font-medium text-blue-700">H₂ Concentration</div>
+                                <div className="text-gray-600">High Dissolved</div>
+                              </div>
+                              <div className="bg-emerald-50 p-2 rounded-lg">
+                                <div className="font-medium text-emerald-700">Antioxidant</div>
+                                <div className="text-gray-600">Selective</div>
+                              </div>
+                              <div className="bg-purple-50 p-2 rounded-lg">
+                                <div className="font-medium text-purple-700">Wellness</div>
+                                <div className="text-gray-600">Recovery Support</div>
+                              </div>
+                              <div className="bg-amber-50 p-2 rounded-lg">
+                                <div className="font-medium text-amber-700">Application</div>
+                                <div className="text-gray-600">Health Focus</div>
+                              </div>
+                            </>
+                          )}
+                          {p.tag === "Industrial" && (
+                            <>
+                              <div className="bg-blue-50 p-2 rounded-lg">
+                                <div className="font-medium text-blue-700">pH Range</div>
+                                <div className="text-gray-600">2.7 - 11.5</div>
+                              </div>
+                              <div className="bg-emerald-50 p-2 rounded-lg">
+                                <div className="font-medium text-emerald-700">Sterilization</div>
+                                <div className="text-gray-600">Strong Acidic</div>
+                              </div>
+                              <div className="bg-purple-50 p-2 rounded-lg">
+                                <div className="font-medium text-purple-700">Grade</div>
+                                <div className="text-gray-600">Food & Pharma</div>
+                              </div>
+                              <div className="bg-amber-50 p-2 rounded-lg">
+                                <div className="font-medium text-amber-700">Eco-Friendly</div>
+                                <div className="text-gray-600">Minimal Chemicals</div>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      </div>
                     </motion.div>
 
                     {/* CTA Button */}
@@ -1439,7 +1798,7 @@ export default function TyentStyleLanding() {
             {testimonials.map((t, i) => (
               <Card key={i} className="rounded-2xl shadow-sm">
                 <CardContent className="space-y-4 pt-6">
-                  <p className="text-gray-700">“{t.quote}”</p>
+                  <p className="text-gray-700">"{t.quote}"</p>
                   <div className="flex items-center gap-2 text-sm text-gray-500">
                     <div className="h-8 w-8 rounded-full bg-gray-200"/>
                     <span>{t.author}</span>
